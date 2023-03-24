@@ -160,7 +160,7 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateEntryForm";
-            this.Text = "CreateEntryForm";
+            this.Text = "Запись клиента";
             this.Load += new System.EventHandler(this.CreateEntryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

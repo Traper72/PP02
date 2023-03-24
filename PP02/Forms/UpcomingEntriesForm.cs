@@ -1,12 +1,6 @@
 ﻿using PP02.Data;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PP02.Forms
@@ -34,7 +28,7 @@ namespace PP02.Forms
             if (counter == 30)
             {
                 UpdateEntries();
-                counter= 0;
+                counter = 0;
             }
             counter++;
         }
@@ -66,7 +60,7 @@ namespace PP02.Forms
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
