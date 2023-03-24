@@ -141,6 +141,7 @@ namespace PP02.Controls
 
         void DeleteService()
         {
+            DeleteAllSubPhoto();
             var param1 = new SqlParameter();
             param1.ParameterName = "@id";
             param1.DbType = DbType.Int32;
@@ -150,6 +151,20 @@ namespace PP02.Controls
                 param1,
             };
             var query = "delete Service WHERE ID = @id";
+            db.DeleteQuery(query, parameters);
+        }
+
+        void DeleteAllSubPhoto()
+        {
+            var param1 = new SqlParameter();
+            param1.ParameterName = "@id";
+            param1.DbType = DbType.Int32;
+            param1.SqlValue = serviceControl.Id;
+            SqlParameter[] parameters =
+            {
+                param1,
+            };
+            var query = "delete ServicePhoto WHERE ServiceID = @id";
             db.DeleteQuery(query, parameters);
         }
 

@@ -114,19 +114,19 @@ namespace PP02
                     query += " WHERE Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%'";
                     break;
                 case 1:
-                    query += " WHERE Discount >= 0 and Discount < 0.05 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%'";
+                    query += " WHERE Discount >= 0 and Discount < 0.05 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%' and Discount >= 0 and Discount < 0.05";
                     break;
                 case 2:
-                    query += " WHERE Discount >= 0.05 and Discount < 0.15 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%'";
+                    query += " WHERE Discount >= 0.05 and Discount < 0.15 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%' and Discount >= 0.05 and Discount < 0.15";
                     break;
                 case 3:
-                    query += " WHERE Discount >= 0.15 and Discount < 0.3 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%'";
+                    query += " WHERE Discount >= 0.15 and Discount < 0.3 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%' and Discount >= 0.15 and Discount < 0.3";
                     break;
                 case 4:
-                    query += " WHERE Discount >= 0.3 and Discount < 0.7 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%'";
+                    query += " WHERE Discount >= 0.3 and Discount < 0.7 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%' and Discount >= 0.3 and Discount < 0.7";
                     break;
                 case 5:
-                    query += " WHERE Discount >= 0.7 and Discount < 1 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%'";
+                    query += " WHERE Discount >= 0.7 and Discount < 1 and Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%' and Discount >= 0.7 and Discount < 1";
                     break;
                 default:
                     query += " WHERE Title LIKE '%' + @searchString + '%' or Description LIKE '%' + @searchString + '%'";

@@ -23,6 +23,7 @@ namespace PP02.Forms
             idService = service.Id;
             InitializeComponent();
 
+            CenterToScreen();
             BackColor = MyColor.whiteColor;
             button1.BackColor = MyColor.blueColor;
             button1.ForeColor = MyColor.whiteColor;
@@ -84,6 +85,7 @@ namespace PP02.Forms
             {
                 CreateEntry(model);
                 MessageBox.Show("Запись добавлена", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (Exception ex)
             {
