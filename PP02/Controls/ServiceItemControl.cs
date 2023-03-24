@@ -53,6 +53,10 @@ namespace PP02.Controls
 
         private void ServiceItemControl_Load(object sender, EventArgs e)
         {
+            if (serviceControl.Discount != 0)
+            {
+                this.BackColor = MyColor.greenColor;
+            }
             int price = (int)(serviceControl.Cost * (1 - (decimal)serviceControl.Discount));
             var path = serviceControl.MainImagePath[0] == ' ' ? serviceControl.MainImagePath.Remove(0, 1) : serviceControl.MainImagePath;
             pictureBoxService.ImageLocation = Path.Combine(Environment.CurrentDirectory, "..\\..\\Img", path);
